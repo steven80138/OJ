@@ -15,7 +15,10 @@ $problem = $stmt -> fetch();
 </head>
 <body>
    <h2><?= htmlspecialchars($problem['title']) ?></h2>
-   <pre><?= htmlspecialchars($problem['description']) ?></pre>
+   <pre> Description: <?= htmlspecialchars($problem['description']) ?></pre>
+   <pre> Input format: <?= htmlspecialchars($problem['input_format']) ?></pre>
+   <pre> Sample input: <?= htmlspecialchars($problem['sample_input']) ?></pre>
+   <pre> Sample output: <?= htmlspecialchars($problem['sample_output']) ?></pre>
    
    <h3>Upload the code</h3>
    <form action="submit.php" method="post" enctype="multipart/form-data">

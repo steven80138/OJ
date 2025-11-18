@@ -17,7 +17,7 @@ $problems = $db -> query("SELECT id, title FROM Problems") -> fetchALL();
      <?php foreach ($problems as $p): ?>
         <tr>
            <td><?= htmlspecialchars($p['id']) ?></td>
-           <td><a href="problem.php?id=<? $p['id'] ?>">
+           <td><a href="problem.php?id=<?= $p['id'] ?>">
               <?= htmlspecialchars($p['title']) ?>
            </a></td>
         </tr>
